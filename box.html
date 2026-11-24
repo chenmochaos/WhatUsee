@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的 Box · WhatUsee</title>
+  <link rel="icon" href="icons/48.png">
+  <link rel="stylesheet" href="box.css">
+  <script src="marker-settings.js" defer></script>
+  <script src="box.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="box.html" aria-label="WhatUsee Box"><img src="icons/48.png" alt="">WhatUsee</a>
+      <div class="toolbar">
+      <nav aria-label="Box 视图">
+        <button id="library" aria-pressed="true"><img src="icons/list.svg" alt="">收藏</button>
+        <button id="study" aria-pressed="false"><img src="icons/layers.svg" alt="">复习</button>
+      </nav>
+      <details id="settings">
+        <summary aria-label="划词设置" title="划词设置"><img src="icons/settings-2.svg" alt=""></summary>
+        <div class="marker-controls">
+        <strong>划词设置</strong>
+        <label>深色模式<input id="dotDark" type="color" value="#e5e7eb"></label>
+        <label>浅色模式<input id="dotLight" type="color" value="#222222"></label>
+        <label>小点位置<select id="dotCorner">
+          <option value="top-right">右上角</option><option value="top-left">左上角</option>
+          <option value="bottom-right">右下角</option><option value="bottom-left">左下角</option>
+        </select></label>
+        <button id="resetMarker">恢复默认</button>
+        <span id="settingsStatus" role="status"></span>
+        </div>
+      </details>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="collection">
+      <header class="page-heading"><h1>我的 Box</h1><p id="count"></p></header>
+      <div id="rows"></div>
+      <div id="empty" class="empty" hidden><img src="icons/inbox.svg" alt=""><p>这里还空着</p><span>在网页中选中一个词或句子，加入 Box 开始复习。</span></div>
+    </section>
+    <section id="review" hidden>
+      <header class="page-heading"><h1>复习</h1><p id="progress"></p></header>
+      <div id="reviewEmpty" class="empty" hidden>
+        <img src="icons/inbox.svg" alt="">
+        <p>还没有可复习的内容</p>
+        <span>先在网页中选中单词或句子，加入 Box。</span>
+        <button id="reviewBack">返回收藏</button>
+      </div>
+      <article id="card">
+        <p id="prompt" lang="en"></p><p id="phonetic"></p>
+        <div id="answer" hidden></div>
+        <div id="reviewExample" hidden><p id="reviewExampleText" lang="en"></p><p id="reviewExampleTranslation"></p></div>
+        <small id="reviewCredit" hidden>Wiktionary · CC BY-SA 3.0</small>
+        <a id="reviewSource" target="_blank" rel="noopener noreferrer"></a>
+      </article>
+      <div class="controls">
+        <button id="reveal" class="primary"><img src="icons/eye.svg" alt="">查看释义</button>
+        <button id="keep" class="primary" hidden><img src="icons/check.svg" alt="">保留，下一条<img src="icons/arrow-right.svg" alt=""></button>
+        <button id="remove" hidden><img src="icons/trash-2.svg" alt="">移出 Box</button>
+      </div>
+      <div id="done" class="empty" hidden><img src="icons/check.svg" alt=""><p>本轮复习完成</p><button id="back">返回收藏</button></div>
+    </section>
+    <p id="notice" role="status"></p>
+  </main>
+</body>
+</html>
