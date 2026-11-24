@@ -40,3 +40,17 @@ WhatUsee 是一个用于阅读英文网页的 Chrome 扩展。选中单词或句
 ## 第三方许可
 
 随附词典和图标的许可文本分别位于 dict/LICENSE 和 icons/LICENSE。
+
+## 支持项目
+
+Chrome 网上应用店开发者账号需要支付一次性注册费。如果 WhatUsee 对你有帮助，欢迎自愿支持，用于承担这笔费用和后续维护。支持完全出于自愿，不影响扩展的使用。
+
+收到支持后，我会继续完善 WhatUsee，并在条件具备时提交到 Chrome 网上应用店。提交后仍需经过 Google 审核，实际上架时间以审核结果为准。
+
+微信支付：
+
+![微信支付收款码](assets/wechat-pay.jpg)
+
+支付宝：
+
+![支付宝收款码](assets/alipay.jpg)
